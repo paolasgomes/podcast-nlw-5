@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --white-background: #ffffff;
+
+  --text-body-nofocused: #aba8b2;
+  --text-body: #808080;
+  --text-heading: #494d4b;
+
+  --primary-purple: #8257e5;
+  --primary-purple-dark: #6f48c9;
+}
+
+html {
+  font-size: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 87.5%;
+  }
+}
