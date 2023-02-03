@@ -1,0 +1,75 @@
+.latest-releases {
+  border: 1px solid yellow;
+  padding: 0 4rem;
+}
+
+.latest-releases h1 {
+  margin: 2rem 0 1.5rem 0;
+  font: 600 1.4rem var(--font-lexend);
+  color: var(--text-heading);
+}
+
+.cards-releases {
+  display: flex;
+  gap: 2rem;
+}
+
+.card-release {
+  width: min(30rem, 100%);
+  height: min(8.5rem, 100%);
+  background-color: var(--white-background);
+  border: 1px solid #e6e8eb;
+  border-radius: 24px;
+  padding-right: 1.5rem;
+
+  display: flex;
+  gap: 3.5rem;
+}
+
+.track-image {
+  width: min(6rem, 100%);
+  height: min(6rem, 100%);
+  padding: 1.2rem;
+}
+
+.player-track {
+  display: flex;
+  gap: 1.8rem;
+
+  padding: 1.8rem 0;
+}
+
+.track-info h2 {
+  font: 600 1.2rem var(--font-lexend);
+  color: var(--text-heading);
+  margin-bottom: 0.5rem;
+}
+
+.track-info h3 {
+  margin-bottom: 1rem;
+}
+
+.track-info h3,
+.track-info p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text-body);
+}
+
+.play-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.play {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: transparent;
+  background-color: transparent;
+}
+
+.play img {
+  width: 100%;
+  object-fit: cover;
+}

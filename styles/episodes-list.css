@@ -1,0 +1,57 @@
+.episodes-list {
+  padding: 0 4rem;
+}
+
+.episodes-list h1 {
+  margin: 2rem 0;
+  font: 600 1.4rem var(--font-lexend);
+  color: var(--text-heading);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.episodes-list h1 span {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text-body);
+}
+
+table {
+  width: min(88rem, 100%);
+  text-align: justify;
+}
+
+th {
+  font: 500 1rem var(--font-lexend);
+  color: var(--text-body-nofocused);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e6e8eb;
+}
+
+td {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e6e8eb;
+}
+
+#track-id {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#track-id span {
+  font: 600 1.1rem var(--font-lexend);
+  color: var(--text-heading);
+}
+
+td button img {
+  width: 2rem;
+  height: 2rem;
+}
+
+td button {
+  border: transparent;
+  background-color: transparent;
+}

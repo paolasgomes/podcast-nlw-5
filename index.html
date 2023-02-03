@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="styles/default.css" />
     <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/latest-releases.css" />
+    <link rel="stylesheet" href="styles/episodes-list.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,18 +19,106 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <header>
-        <div class="logo-image">
-          <img src="./assets/logo.svg" alt="Logo Podcastr" />
+      <section class="player-tracks">
+        <header>
+          <div class="logo-image">
+            <img src="./assets/logo.svg" alt="Logo Podcastr" />
+          </div>
+          <div class="intro-text">
+            <p id="text">O melhor para você ouvir, sempre</p>
+            <p id="current-date"></p>
+          </div>
+        </header>
+
+        <div class="latest-releases">
+          <h1>Últimos lançamentos</h1>
+          <div class="cards-releases">
+            <div class="card-release">
+              <div class="track-image">
+                <img src="assets/track-image.png" alt="track image" />
+              </div>
+              <div class="player-track">
+                <div class="track-info">
+                  <h2>O que é um bom código?</h2>
+                  <h3>Diego e Richard</h3>
+                  <p id="posted-date">8 Jan 21 - <span>1:35:18</span></p>
+                </div>
+                <div class="play-button">
+                  <button class="play"><img src="assets/play.svg" alt="" /></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-release">
+              <div class="track-image">
+                <img src="assets/track-image.png" alt="track image" />
+              </div>
+              <div class="player-track">
+                <div class="track-info">
+                  <h2>O que é um bom código?</h2>
+                  <h3>Diego e Richard</h3>
+                  <p id="posted-date">8 Jan 21 - <span>1:35:18</span></p>
+                </div>
+                <div class="play-button">
+                  <button class="play"><img src="assets/play.svg" alt="" /></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-release">
+              <div class="track-image">
+                <img src="assets/track-image.png" alt="track image" />
+              </div>
+              <div class="player-track">
+                <div class="track-info">
+                  <h2>O que é um bom código?</h2>
+                  <h3>Diego e Richard</h3>
+                  <p id="posted-date">8 Jan 21 - <span>1:35:18</span></p>
+                </div>
+                <div class="play-button">
+                  <button class="play"><img src="assets/play.svg" alt="" /></button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="intro-text">
-          <p id="text">O melhor para você ouvir, sempre</p>
-          <p id="current-date"></p>
+
+        <div class="episodes-list">
+          <h1>Todos os episódios<span>16 ao total</span></h1>
+
+          <table>
+            <thead>
+              <th>PODCAST</th>
+              <th>INTEGRANTES</th>
+              <th>DATA</th>
+              <th>DURAÇÃO</th>
+              <th></th>
+            </thead>
+            <tr>
+              <td id="track-id">
+                <img src="assets/track-image-table.png" alt="" />
+                <span>A vida é boa</span>
+              </td>
+              <td>Tiago, Diego e Pellizzetti</td>
+              <td>8 Jan 21</td>
+              <td>1:35:18</td>
+              <td>
+                <button><img src="assets/play.svg" alt="" /></button>
+              </td>
+            </tr>
+          </table>
         </div>
-      </header>
+      </section>
 
       <section class="player-podcast"></section>
     </div>

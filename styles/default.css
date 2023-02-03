@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 :root {
   --white-background: #ffffff;
 
@@ -14,10 +18,11 @@
 
   --primary-purple: #8257e5;
   --primary-purple-dark: #6f48c9;
+  --font-lexend: "Lexend", sans-serif;
 }
 
 html {
-  font-size: 100%;
+  font-size: 81.25%;
 }
 
 @media screen and (min-width: 1024px) {
