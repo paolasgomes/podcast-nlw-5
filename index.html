@@ -43,55 +43,7 @@
 
         <div class="latest-releases">
           <h1>Últimos lançamentos</h1>
-          <div class="cards-releases">
-            <div class="card-release">
-              <div class="track-image">
-                <img src="assets/track-image.png" alt="track image" />
-              </div>
-              <div class="player-track">
-                <div class="track-info">
-                  <h2>O que é um bom código?</h2>
-                  <h3>Diego e Richard</h3>
-                  <p id="posted-date">8 Jan 21 - <span>1:35:18</span></p>
-                </div>
-                <div class="play-button">
-                  <button class="play"><img src="assets/play.svg" alt="" /></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-release">
-              <div class="track-image">
-                <img src="assets/track-image.png" alt="track image" />
-              </div>
-              <div class="player-track">
-                <div class="track-info">
-                  <h2>O que é um bom código?</h2>
-                  <h3>Diego e Richard</h3>
-                  <p id="posted-date">8 Jan 21 - <span>1:35:18</span></p>
-                </div>
-                <div class="play-button">
-                  <button class="play"><img src="assets/play.svg" alt="" /></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-release">
-              <div class="track-image">
-                <img src="assets/track-image.png" alt="track image" />
-              </div>
-              <div class="player-track">
-                <div class="track-info">
-                  <h2>O que é um bom código?</h2>
-                  <h3>Diego e Richard</h3>
-                  <p id="posted-date">8 Jan 21 - <span>1:35:18</span></p>
-                </div>
-                <div class="play-button">
-                  <button class="play"><img src="assets/play.svg" alt="" /></button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="cards-releases"></div>
         </div>
 
         <div class="episodes-list">
@@ -105,18 +57,6 @@
               <th>DURAÇÃO</th>
               <th></th>
             </thead>
-            <tr>
-              <td id="track-id">
-                <img src="assets/track-image-table.png" alt="" />
-                <span>A vida é boa</span>
-              </td>
-              <td>Tiago, Diego e Pellizzetti</td>
-              <td>8 Jan 21</td>
-              <td>1:35:18</td>
-              <td>
-                <button><img src="assets/play.svg" alt="" /></button>
-              </td>
-            </tr>
           </table>
         </div>
       </section>
@@ -130,9 +70,15 @@
           <h2>Como codar tranquilo</h2>
           <p>Tiago e Maria</p>
         </div>
+        <audio
+          src="https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/audios/opensource.m4a"
+          controls="player"
+        ></audio>
       </section>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/headerDate.js"></script>
+    <script src="scripts/episodesList.js"></script>
   </body>
 </html>
