@@ -1,3 +1,9 @@
+.container-overflow {
+  max-height: calc(100vh - 6.5rem);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
 .latest-releases {
   padding: 0 4rem;
 }

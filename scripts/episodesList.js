@@ -29,7 +29,9 @@ const getEpisodes = async () => {
                 <div class="track-info">
                   <h2 id="track-name">${item.title}</h2>
                   <h3 id="track-members">${item.members}</h3>
-                  <p id="posted-date">8 Jan 21 - <span>1:35:18</span></p>
+                  <p id="posted-date"> ${convertDate(
+                    item.published_at
+                  )} - <span>${convertSeconds(item.file.duration)}</span></p>
         </div>
         <div class="play-button">
                   <button class="play" onclick="test()"><img src="assets/play.svg" /></button>
@@ -38,14 +40,14 @@ const getEpisodes = async () => {
 
       cardsContainer.append(div);
 
-      data.map((episodes, index) => {
+      data.forEach((episodes, index) => {
         getEpisodesAll(episodes, index);
       });
     });
   } catch (error) {}
 };
 
-const test = (episodes) => {
+const test = () => {
   let oi = 0;
   console.log("oi => ", oi);
 };
@@ -60,8 +62,8 @@ const getEpisodesAll = (episodes, index) => {
     <span>${episodes.title}</span>
     </td>
      <td>${episodes.members}</td>
-    <td>8 Jan 21</td>
-    <td>${episodes.file.duration}</td>
+    <td>${convertDate(episodes.published_at)}</td>
+    <td>${convertSeconds(episodes.file.duration)}</td>
     <td>
      <button><img src="assets/play.svg" alt="" /></button>
     </td>
@@ -70,17 +72,22 @@ const getEpisodesAll = (episodes, index) => {
   table.appendChild(rowTrack);
 };
 
-// latestEpisodes[index].innerText = item.title;
-// membersPublish[index].innerText = item.members;
+const convertDate = (dateEpisodes) => {
+  const date = dateEpisodes;
 
-// const date = item.published_at;
+  const convertedDate = new Date(date).toLocaleDateString("pt-br", {
+    year: "2-digit",
+    month: "2-digit",
+    day: "numeric",
+  });
 
-// const convertedDate = new Date(date).toDateString("pt-br", {
-//   year: "2-digit",
-//   month: "short",
-//   day: "numeric",
-//   weekday: "",
-// });
+  return convertedDate;
+};
 
-// publishDate[index].innerText = convertedDate;
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#weekday
+const convertSeconds = (secondsEpisodes) => {
+  const seconds = secondsEpisodes;
+
+  const convertedSeconds = new Date(seconds * 1000).toISOString().slice(11, 19);
+
+  return convertedSeconds;
+};
