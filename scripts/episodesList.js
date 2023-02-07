@@ -1,17 +1,21 @@
-const latestEpisodes = document.querySelectorAll("#track-name");
-const membersPublish = document.querySelectorAll("#track-members");
-const publishDate = document.querySelectorAll("#posted-date");
-const playerBtn = document.querySelectorAll(".play");
-const cardsContainer = document.querySelector(".cards-releases");
+const selector = (element) => document.querySelector(element);
 
-const table = document.querySelector("table");
+const latestEpisodes = selector("#track-name");
+const membersPublish = selector("#track-members");
+const publishDate = selector("#posted-date");
+const playerBtn = selector(".play");
+const cardsContainer = selector(".cards-releases");
+
+const table = selector("table");
 
 const url = "http://localhost:3000/episodes";
+
+let data = [];
 
 const getEpisodes = async () => {
   try {
     const response = await axios.get(url);
-    const data = response.data;
+    data = response.data;
     console.log("data.lenght => ", data.lenght);
 
     const latestEpisodes = data.splice(-2);
@@ -33,7 +37,7 @@ const getEpisodes = async () => {
       )}</span></p>
         </div>
         <div class="play-button">
-        <button class="play" onclick="test()"><img src="assets/play.svg" /></button>
+        <button class="play"><img src="assets/play.svg" /></button>
         </div>
         `;
 
@@ -44,11 +48,6 @@ const getEpisodes = async () => {
       });
     });
   } catch (error) {}
-};
-
-const test = () => {
-  let oi = 0;
-  console.log("oi => ", oi);
 };
 
 getEpisodes();

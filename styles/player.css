@@ -50,3 +50,51 @@
   font-size: 1rem;
   color: #dccdff;
 }
+
+.reproduction-track {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.prev,
+.next {
+  width: 24px;
+  height: 24px;
+}
+
+button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+
+  color: #ffffff;
+
+  font-size: 24px;
+}
+
+.controls img {
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  display: none;
+}

@@ -70,15 +70,30 @@
           <h2>Como codar tranquilo</h2>
           <p>Tiago e Maria</p>
         </div>
-        <audio
-          src="https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/audios/opensource.m4a"
-          controls="player"
-        ></audio>
+        <div class="reproduction-track">
+          <span class="current-time">00:00</span>
+          <input type="range" value="0" step="1" />
+          <audio controls="" autoplay=""></audio>
+          <span class="total-time">00:00</span>
+        </div>
+        <div class="controls">
+          <button class="prev">
+            <img src="assets/play-prev.svg" alt="" />
+          </button>
+          <button class="play">
+            <i class="ph-play"></i>
+          </button>
+          <button class="next">
+            <img src="assets/play-next.svg" alt="" />
+          </button>
+        </div>
       </section>
     </div>
 
+    <script src="https://unpkg.com/phosphor-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/headerDate.js"></script>
     <script src="scripts/episodesList.js"></script>
+    <script src="scripts/player.js"></script>
   </body>
 </html>

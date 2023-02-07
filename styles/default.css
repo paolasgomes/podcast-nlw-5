@@ -17,6 +17,8 @@ button:hover {
 :root {
   --white-background: #ffffff;
 
+  --green: #04d361;
+
   --text-body-nofocused: #aba8b2;
   --text-body: #808080;
   --text-heading: #494d4b;
