@@ -9,11 +9,10 @@ const table = document.querySelector("table");
 const url = "http://localhost:3000/episodes";
 
 const getEpisodes = async () => {
-  console.log("qwee");
-
   try {
     const response = await axios.get(url);
     const data = response.data;
+    console.log("data.lenght => ", data.lenght);
 
     const latestEpisodes = data.splice(-2);
 
@@ -22,19 +21,19 @@ const getEpisodes = async () => {
       div.classList.add("card-release");
 
       div.innerHTML = `
-        <div class="track-image">
-                <img src="assets/track-image.png" alt="track image" />
-              </div>
-              <div class="player-track">
-                <div class="track-info">
-                  <h2 id="track-name">${item.title}</h2>
-                  <h3 id="track-members">${item.members}</h3>
-                  <p id="posted-date"> ${convertDate(
-                    item.published_at
-                  )} - <span>${convertSeconds(item.file.duration)}</span></p>
+      <div class="track-image">
+      <img src="assets/track-image.png" alt="track image" />
+      </div>
+      <div class="player-track">
+      <div class="track-info">
+      <h2 id="track-name">${item.title}</h2>
+      <h3 id="track-members">${item.members}</h3>
+      <p id="posted-date"> ${convertDate(item.published_at)} - <span>${convertSeconds(
+        item.file.duration
+      )}</span></p>
         </div>
         <div class="play-button">
-                  <button class="play" onclick="test()"><img src="assets/play.svg" /></button>
+        <button class="play" onclick="test()"><img src="assets/play.svg" /></button>
         </div>
         `;
 
